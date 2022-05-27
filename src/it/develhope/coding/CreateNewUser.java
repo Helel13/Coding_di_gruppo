@@ -8,7 +8,7 @@ public class CreateNewUser{
 
     private CreateNewUser() {}
 
-    public static void newUser() {
+    public synchronized static void newUser() {
 
         Scanner inputUser = new Scanner(System.in);
 
@@ -19,7 +19,7 @@ public class CreateNewUser{
         String surname = inputUser.nextLine();
 
 
-        boolean isValid = false;
+        boolean isValid;
         do {
 
             System.out.print("please enter your age: ");

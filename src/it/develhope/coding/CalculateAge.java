@@ -7,10 +7,9 @@ public class CalculateAge {
 
     private CalculateAge() {}
 
-    public static int calculateAge ( int userAge){
+    public synchronized static int calculateAge ( int userAge){
 
-        int bornYear = (LocalDate.now().getYear() - userAge);
-        return bornYear;
+        return (LocalDate.now().getYear() - userAge);
 
     }
 

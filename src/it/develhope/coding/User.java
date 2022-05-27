@@ -40,16 +40,8 @@ public class User {
 
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", age=" + age +
-                '}';
-    }
 
-    public void printUser() {
+    public synchronized void printUser() {
         System.out.println(" User is: " + getName() + " " + getSurname() + " have " + getAge() +
                 " years old and born in " + getBornYear);
 
